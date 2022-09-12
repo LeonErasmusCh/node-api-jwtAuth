@@ -16,33 +16,7 @@ app.use(cors({
     origin: '*'
 }))
 
-app.use(router);
-
-/* // GET, POST, PUt, DELETE
-app.get('/', (request, response) => {
-    //request.params
-    console.log(request.body)
-    console.log('API REST on method GET')
-    return response.status(200).json({ 'message': 'API REST on method GET'})
-})
-app.post('/', (request, response) => {
-    //request.params
-    console.log(request.body)
-    console.log('API REST on method POST')
-    return response.status(201).json({ 'message': 'API REST on method POST'})
-})
-app.put('/', (request, response) => {
-    //request.params
-    console.log(request.body)
-    console.log('API REST on method PUT')
-    return response.status(200).json({ 'message': 'API REST on method PUT'})
-})
-app.delete('/', (request, response) => {
-    //request.params
-    console.log(request.body)
-    console.log('API REST on method DELETE')
-    return response.status(200).json({ 'message': 'API REST on method DELETE'})
-}) */
+app.use('/api', router);
 
 
 app.listen(PORT, () => {
